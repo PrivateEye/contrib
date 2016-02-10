@@ -1,0 +1,64 @@
+# By default the profiler will use the profiler.yml file that exists alongside
+#   the profiler DLL. This can be overridden using the environment variable
+#   PRIVATEEYE_PROFILER_CONFIG to point to a new config file
+
+# The profiler will act as a server and you can attach/detach ad-hoc 
+#   - Default (false)
+servermode: false 
+
+# The address to connect to when in client mode (servermode: true) 
+#   - Default (127.0.0.1)
+clientaddress: 127.0.0.1
+
+# the portnumber to listen on (servermode: true) or connect to 
+#   (servermode: false) - Default (4444)
+portnumber: 4444
+
+# If an assembly/type/method is not implicitly included or excluded it is 
+#   defaulted to included - Default: (empty-list)
+# NOTE: the assembly/type/method fields are regular expressions
+# The following filters will exclude the common .NET assemblies
+filters:
+  - include: false
+    assembly: mscorlib
+    type: .*
+    method: .*
+  - include: false
+    assembly: System
+    type: .*
+    method: .*
+  - include: false
+    assembly: System
+    type: .*
+    method: .*
+
+# Allow automatically implmented getter and setter properties to be 
+#   instrumented - Default (true)
+instrumentautoprops: true
+
+# The runtime may decide to make optimisations with 'release' builds such as 
+#   inlining and introducing tailcall, this will cause unexpected method call 
+#   counts and even missing methods
+# By disabling the ability for the runtime to do this will make your results 
+#   consistent between executions but will impact performance
+# Default (true)
+disableoptimisations: true
+
+# Marks all tracking to be on from start - Default (false)
+startenabled: false
+
+# Marks alloc tracking to be on from start - Default (true)
+# NOTE: is OR'd with startenabled
+allocenabled: true
+
+# Marks gc tracking to be on from start - Default (true)
+# NOTE: is OR'd with startenabled
+gcenabled: true
+
+# Marks method tracking to be on from start - Default (true)
+# NOTE: is OR'd with startenabled
+mtenabled: true
+
+# Marks exception tracking to be on from start - Default (true)
+# NOTE: is OR'd with startenabled
+excenabled: true

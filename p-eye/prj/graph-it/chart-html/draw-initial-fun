@@ -1,0 +1,18 @@
+﻿    function drawInitialChart() {
+        // Connect the choose files button:
+        document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+        // Load some static example data:
+        //var data1Str = document.querySelector("div#data_1").innerHTML.trim();
+        //var data2Str = document.querySelector("div#data_2").innerHTML.trim();
+        //var data3Str = document.querySelector("div#data_3").innerHTML.trim();
+		$selectors
+        //var histos = [data3Str, data2Str, data1Str];
+		var histos = $histos
+        //var names = ['A', 'B', 'C'];
+		var names = $names
+
+        setChartData(names, histos);
+        drawChart();
+    }
+

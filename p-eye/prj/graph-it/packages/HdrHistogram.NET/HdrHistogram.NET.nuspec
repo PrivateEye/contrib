@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>HdrHistogram.NET</id>
+        <version>0.0.1-alpha</version>
+        <title>HdrHistogram.NET</title>
+        <authors>Matt Warren</authors>
+        <projectUrl>https://github.com/HdrHistogram/HdrHistogram</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>See http://giltene.github.io/HdrHistogram/ for more information</description>
+        <summary>A .NET port of the Java HdrHistogram library</summary>
+    </metadata>
+</package>

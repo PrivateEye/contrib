@@ -1,0 +1,1 @@
+fsharpi --load:privateeye.fsx
