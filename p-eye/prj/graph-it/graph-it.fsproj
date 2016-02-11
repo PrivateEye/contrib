@@ -64,8 +64,9 @@
     <None Include="chart-html\chart" />
     <Compile Include="render-info.fs" />
     <Compile Include="render.fs" />
+    <Compile Include="private-eye-ext.fs" />
     <Compile Include="private-eye.fs" />
-    <None Include="do-profiling.fsx" />
+    <None Include="profile.fsx" />
     <None Include="test\stats.fsx" />
     <None Include="test\hdr.fsx" />
     <None Include="test\test.fs" />

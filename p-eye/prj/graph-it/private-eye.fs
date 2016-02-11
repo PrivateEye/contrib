@@ -6,11 +6,6 @@ open System.IO
 open PrivateEye.Bridge
 open PrivateEye.Bridge.profilersession
 
-module Filter = 
-  let called (xs:MethodInformation seq) =
-    xs
-    |> Seq.filter (fun x-> x.CalledCount > 0UL)
-
 type ByteSizeFormatProvider() =
 
     let formatSpecifier = "SZ"
